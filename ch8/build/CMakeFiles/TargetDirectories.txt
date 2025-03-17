@@ -1,3 +1,0 @@
-/Users/liuyz/slam/slambook2/ch8/build/CMakeFiles/optical_flow.dir
-/Users/liuyz/slam/slambook2/ch8/build/CMakeFiles/edit_cache.dir
-/Users/liuyz/slam/slambook2/ch8/build/CMakeFiles/rebuild_cache.dir

@@ -1,4 +1,0 @@
-/Users/liuyz/slam/slambook2/ch5/imageBasics/build/CMakeFiles/imageBasics.dir
-/Users/liuyz/slam/slambook2/ch5/imageBasics/build/CMakeFiles/undistortImage.dir
-/Users/liuyz/slam/slambook2/ch5/imageBasics/build/CMakeFiles/edit_cache.dir
-/Users/liuyz/slam/slambook2/ch5/imageBasics/build/CMakeFiles/rebuild_cache.dir
