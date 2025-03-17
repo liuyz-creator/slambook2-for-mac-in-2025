@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.0)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+find_package(Pangolin REQUIRED)
+include_directories(${Pangolin_INCLUDE_DIRS})
+find_package(Sophus REQUIRED)
+include_directories(${Sophus_INCLUDE_DIRS})
+find_package(OpenCV REQUIRED)
+find_package(Boost REQUIRED)
+include_directories(${OpenCV_LIBS})
+add_executable(jointMap jointMap.cpp)
+target_link_libraries(jointMap ${OpenCV_LIBS} ${Pangolin_LIBRARIES} Boost::boost)

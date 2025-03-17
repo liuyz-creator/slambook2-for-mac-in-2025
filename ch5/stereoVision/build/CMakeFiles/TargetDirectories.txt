@@ -1,0 +1,3 @@
+/Users/liuyz/slam/slambook2/ch5/stereoVision/build/CMakeFiles/stereoVision.dir
+/Users/liuyz/slam/slambook2/ch5/stereoVision/build/CMakeFiles/edit_cache.dir
+/Users/liuyz/slam/slambook2/ch5/stereoVision/build/CMakeFiles/rebuild_cache.dir

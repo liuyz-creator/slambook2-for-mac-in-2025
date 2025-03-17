@@ -1,0 +1,3 @@
+/Users/liuyz/slam/slambook2/ch4/example/build/CMakeFiles/trajectoryError.dir
+/Users/liuyz/slam/slambook2/ch4/example/build/CMakeFiles/edit_cache.dir
+/Users/liuyz/slam/slambook2/ch4/example/build/CMakeFiles/rebuild_cache.dir
