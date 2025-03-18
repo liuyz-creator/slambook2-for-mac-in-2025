@@ -91,7 +91,44 @@ int main(int argc, char **argv){
     vector<Point2f> pt1, pt2;
     for(auto &kp : kp1) pt1.push_back(kp.pt);
     vector<uchar> status;
-    vector<uchar> 
+    vector<float> error;
+    t1 = chrono::steady_clock::now();
+    cv::calcOpticalFlowPyrLK(img1, img2, pt1, pt2, status, error);
+    t2 = chrono::steady_clock::now();
+    time_used = chrono::duration_cast<chrono::duration<double>>(t2 - t1);
+    cout << "optical flow by opencv: " << time_used.count() << endl;
+
+    Mat img2_single;
+    cv::cvtColor(img2, img2_single, COLOR_GRAY2BGR);
+    for(int i = 0; i < kp2_single.size(); i++){
+        if(success_single[i]){
+            cv::circle(img2_single, kp2_single[i].pt, 2, cv::Scalar(0, 250, 0), 2);
+            cv::line(img2_single, kp1[i].pt, kp2_single[i].pt, cv::Scalar(0, 250, 0));
+        }
+    }
+
+    Mat img2_multi;
+    cv::cvtColor(img2, img2_multi, COLOR_GRAY2BGR);
+    for(int i = 0; i < kp2_multi.size(); i++){
+        if(success_multi[i]){
+            cv::circle(img2_multi, kp2_multi[i].pt, 2, cv::Scalar(0, 250, 0), 2);
+            cv::line(img2_multi, kp1[i].pt, kp2_multi[i].pt, cv::Scalar(0, 250, 0));
+        }
+    }
+
+    Mat img2_CV;
+    cv::cvtColor(img2, img2_CV, COLOR_GRAY2BGR);
+    for(int i = 0; i < pt2.size(); i++){
+        if(status[i]){
+            cv::circle(img2_CV, pt2[i], 2, cv::Scalar(0, 250, 0), 2);
+            cv::line(img2_CV, pt1[i], pt2[i], cv::Scalar(0, 250, 0));
+        }
+    }
+
+    cv::imshow("tracked single level", img2_single);
+    cv::imshow("tracked multi level", img2_multi);
+    cv::imshow("tracked by opencv", img2_CV);
+    cv::waitKey(0);
     return 0;
 }
 
@@ -221,5 +258,32 @@ void OpticalFlowMultiLevel(
     }
     chrono::steady_clock::time_point t2 = chrono::steady_clock::now();
     chrono::duration<double> time_used = chrono::duration_cast<chrono::duration<double>>(t2 - t1);
-    cout << "optimization costs time: " << time_used.count() << "seconds." << endl;
+    cout << "build pyramid time: " << time_used.count() << "seconds." << endl;
+
+    vector<KeyPoint> kp1_pyr, kp2_pyr;
+    for(auto &kp : kp1){
+        auto kp_top = kp;
+        kp_top.pt *= scales[pyramids - 1];
+        kp1_pyr.push_back(kp_top);
+        kp2_pyr.push_back(kp_top);
+    }
+
+    for(int level = pyramids - 1; level >= 0; level--){
+        success.clear();
+        t1 = chrono::steady_clock::now();
+        OpticalFlowSingleLevel(pyr1[level], pyr2[level], kp1_pyr, kp2_pyr, success, inverse, true);
+        t2 = chrono::steady_clock::now();
+        time_used = chrono::duration_cast<chrono::duration<double>>(t2 - t1);
+        cout << "track pyr" << level << " cost time: " << time_used.count() << endl;
+
+        if(level > 0){
+            for(auto &kp : kp1_pyr)
+                kp.pt /= pyramid_scale;
+            for(auto &kp : kp2_pyr)
+                kp.pt /= pyramid_scale;
+        }
+    }
+
+    for(auto &kp: kp2_pyr)
+        kp2.push_back(kp);
 }
