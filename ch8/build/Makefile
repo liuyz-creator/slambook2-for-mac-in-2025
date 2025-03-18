@@ -129,6 +129,43 @@ optical_flow/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/optical_flow.dir/build.make CMakeFiles/optical_flow.dir/build
 .PHONY : optical_flow/fast
 
+#=============================================================================
+# Target rules for targets named direct_method
+
+# Build rule for target.
+direct_method: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 direct_method
+.PHONY : direct_method
+
+# fast build rule for target.
+direct_method/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/direct_method.dir/build.make CMakeFiles/direct_method.dir/build
+.PHONY : direct_method/fast
+
+direct_method.o: direct_method.cpp.o
+.PHONY : direct_method.o
+
+# target to build an object file
+direct_method.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/direct_method.dir/build.make CMakeFiles/direct_method.dir/direct_method.cpp.o
+.PHONY : direct_method.cpp.o
+
+direct_method.i: direct_method.cpp.i
+.PHONY : direct_method.i
+
+# target to preprocess a source file
+direct_method.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/direct_method.dir/build.make CMakeFiles/direct_method.dir/direct_method.cpp.i
+.PHONY : direct_method.cpp.i
+
+direct_method.s: direct_method.cpp.s
+.PHONY : direct_method.s
+
+# target to generate assembly for a file
+direct_method.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/direct_method.dir/build.make CMakeFiles/direct_method.dir/direct_method.cpp.s
+.PHONY : direct_method.cpp.s
+
 optical_flow.o: optical_flow.cpp.o
 .PHONY : optical_flow.o
 
@@ -161,7 +198,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... direct_method"
 	@echo "... optical_flow"
+	@echo "... direct_method.o"
+	@echo "... direct_method.i"
+	@echo "... direct_method.s"
 	@echo "... optical_flow.o"
 	@echo "... optical_flow.i"
 	@echo "... optical_flow.s"
