@@ -75,6 +75,49 @@ void JacobianAccumulator::accumulate_jacobian(const cv::Range &range){
     for(size_t i = range.start; i < range.end; i++){
         Eigen::Vector3d point_ref = 
             depth_ref[i] * Eigen::Vector3d((px_ref[i][0] - cx) / fx, (px_ref[i][1] - cy) / fy, 1);
-        Eigen::Vector3d point_cur
+        Eigen::Vector3d point_cur = T21 * point_ref;
+        if(point_cur[2] < 0)
+            continue;
+        float u = fx * point_cur[0] / point_cur[2] + cx, v = fy * point_fur[1] / point_cur[2] + cy;
+        if(u < half_patch_size || u > img2.cols - half_patch_size ||
+        v < half_patch_size || v > img2.rows - half_patch_size)
+            continue;
+        
+        projection[i] = Eigen::Vector2d(u, v);
+        double X = point_cur[0], Y = point_cur[1], Z = point_cur[2];
+        Z2 = Z * Z, Z_inv = 1.0 / Z, Z2_inv = Z_inv * Z_inv;
+        cnt_good++;
+
+        for(int x = -half_patch_size; x <= half_patch_size; x++)
+        for(int y = -half_patch_size; y <= half_patch_size; y++){
+            double error = GetPixelValue(img1, px_ref[i][0] + x, px_ref[i][1] + y) -
+                GetPixelValue(img2, u + x, v + y);
+            Matrix26d J_pixel_xi;
+            Eigen::Vector2d J_img_pixel;
+
+            J_pixel_xi(0, 0) = fx * Z_inv;
+            J_pixel_xi(0, 1) = 0;
+            J_pixel_xi(0, 2) = -fx * X * Z2_inv;
+            J_pixel_xi(0, 3) = -fx * X * Y * Z2_inv;
+            J_pixel_xi(0, 4) = fx + fx * X * X * Z2_inv;
+            J_pixel_xi(0, 5) = -fx * Y * Z_inv;
+
+            J_pixel_xi(1, 0) = 0;
+            J_pixel_xi(1, 1) = fy * Z_inv;
+            J_pixel_xi(1, 2) = -fy * Y * Z2_inv;
+            J_pixel_xi(1, 3) = -fy - fy * Y * Y * Z2_inv;
+            J_pixel_xi(1, 4) = fy * X * Y * Z2_inv;
+            J_pixel_xi(1, 5) = fy * X * Z2_inv;
+
+            J_img_pixel = Eigen::Vector2d(
+                0.5 * (GetPixelValue(img2, u + 1 + x, v + y) - GetPixelValue(img2, u - 1 + x, v + y)),
+                0.5 * (GetPixelValue(img2, u + x, v + 1 + y) - GetPixelValue(img2, u + x, v - 1 + y))
+            );
+
+            Vector6d J = 1.0 * (J_img_pixel.transpose() * J_pixel_xi).transpose();
+            hessian += J * J.transpose();
+            bias += -error * J;
+            cost_tmp += error * error;
+        }
     }
 }
