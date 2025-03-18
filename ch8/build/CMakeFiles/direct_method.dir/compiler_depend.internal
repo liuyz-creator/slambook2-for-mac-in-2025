@@ -1317,6 +1317,8 @@ CMakeFiles/direct_method.dir/direct_method.cpp.o
  /opt/anaconda3/include/boost/version.hpp
  /opt/homebrew/include/eigen3/Eigen/Cholesky
  /opt/homebrew/include/eigen3/Eigen/Core
+ /opt/homebrew/include/eigen3/Eigen/Dense
+ /opt/homebrew/include/eigen3/Eigen/Eigenvalues
  /opt/homebrew/include/eigen3/Eigen/Geometry
  /opt/homebrew/include/eigen3/Eigen/Householder
  /opt/homebrew/include/eigen3/Eigen/Jacobi
@@ -1451,6 +1453,22 @@ CMakeFiles/direct_method.dir/direct_method.cpp.o
  /opt/homebrew/include/eigen3/Eigen/src/Core/util/StaticAssert.h
  /opt/homebrew/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h
  /opt/homebrew/include/eigen3/Eigen/src/Core/util/XprHelper.h
+ /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h
+ /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h
+ /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h
+ /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h
+ /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h
+ /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/ComplexEigenSolver.h
+ /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h
+ /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/EigenSolver.h
+ /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h
+ /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h
+ /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h
+ /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h
+ /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h
+ /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h
+ /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h
+ /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h
  /opt/homebrew/include/eigen3/Eigen/src/Geometry/AlignedBox.h
  /opt/homebrew/include/eigen3/Eigen/src/Geometry/AngleAxis.h
  /opt/homebrew/include/eigen3/Eigen/src/Geometry/EulerAngles.h

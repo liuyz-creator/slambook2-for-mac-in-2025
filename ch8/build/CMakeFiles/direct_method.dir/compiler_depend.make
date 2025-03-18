@@ -1316,6 +1316,8 @@ CMakeFiles/direct_method.dir/direct_method.cpp.o: /Users/liuyz/slam/slambook2/ch
   /opt/anaconda3/include/boost/version.hpp \
   /opt/homebrew/include/eigen3/Eigen/Cholesky \
   /opt/homebrew/include/eigen3/Eigen/Core \
+  /opt/homebrew/include/eigen3/Eigen/Dense \
+  /opt/homebrew/include/eigen3/Eigen/Eigenvalues \
   /opt/homebrew/include/eigen3/Eigen/Geometry \
   /opt/homebrew/include/eigen3/Eigen/Householder \
   /opt/homebrew/include/eigen3/Eigen/Jacobi \
@@ -1450,6 +1452,22 @@ CMakeFiles/direct_method.dir/direct_method.cpp.o: /Users/liuyz/slam/slambook2/ch
   /opt/homebrew/include/eigen3/Eigen/src/Core/util/StaticAssert.h \
   /opt/homebrew/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h \
   /opt/homebrew/include/eigen3/Eigen/src/Core/util/XprHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/ComplexEigenSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/EigenSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h \
   /opt/homebrew/include/eigen3/Eigen/src/Geometry/AlignedBox.h \
   /opt/homebrew/include/eigen3/Eigen/src/Geometry/AngleAxis.h \
   /opt/homebrew/include/eigen3/Eigen/src/Geometry/EulerAngles.h \
@@ -1756,15 +1774,27 @@ CMakeFiles/direct_method.dir/direct_method.cpp.o: /Users/liuyz/slam/slambook2/ch
 
 /usr/local/include/pangolin/display/view.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/errno.h:
+/usr/local/include/pangolin/display/display.h:
 
-/usr/local/include/opencv4/opencv2/video/background_segm.hpp:
+/usr/local/include/pangolin/display/attach.h:
+
+/usr/local/include/pangolin/compat/type_traits.h:
+
+/usr/local/include/opencv4/opencv2/videoio.hpp:
+
+/usr/local/include/opencv4/opencv2/video/tracking.hpp:
 
 /usr/local/include/opencv4/opencv2/video.hpp:
 
+/usr/local/include/opencv4/opencv2/stitching/warpers.hpp:
+
 /usr/local/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp:
 
+/usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp:
+
 /usr/local/include/opencv4/opencv2/stitching/detail/util_inl.hpp:
+
+/usr/local/include/opencv4/opencv2/stitching/detail/util.hpp:
 
 /usr/local/include/opencv4/opencv2/stitching/detail/matchers.hpp:
 
@@ -1784,9 +1814,9 @@ CMakeFiles/direct_method.dir/direct_method.cpp.o: /Users/liuyz/slam/slambook2/ch
 
 /usr/local/include/opencv4/opencv2/highgui.hpp:
 
-/usr/local/include/opencv4/opencv2/stitching/warpers.hpp:
-
 /usr/local/include/opencv4/opencv2/flann/timer.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h:
 
 /usr/local/include/opencv4/opencv2/flann/saving.h:
 
@@ -1862,8 +1892,6 @@ CMakeFiles/direct_method.dir/direct_method.cpp.o: /Users/liuyz/slam/slambook2/ch
 
 /usr/local/include/opencv4/opencv2/core/ovx.hpp:
 
-/usr/local/include/opencv4/opencv2/video/tracking.hpp:
-
 /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h:
 
 /usr/local/include/opencv4/opencv2/core/optim.hpp:
@@ -1929,6 +1957,12 @@ CMakeFiles/direct_method.dir/direct_method.cpp.o: /Users/liuyz/slam/slambook2/ch
 /opt/homebrew/include/eigen3/Eigen/src/Householder/BlockHouseholder.h:
 
 /opt/homebrew/include/eigen3/Eigen/src/Geometry/AlignedBox.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/EigenSolver.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/ComplexEigenSolver.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h:
 
 /opt/homebrew/include/eigen3/Eigen/src/Core/util/StaticAssert.h:
 
@@ -2003,8 +2037,6 @@ CMakeFiles/direct_method.dir/direct_method.cpp.o: /Users/liuyz/slam/slambook2/ch
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__memory/allocator.h:
 
 /opt/homebrew/include/eigen3/Eigen/src/Core/StlIterators.h:
-
-/usr/local/include/pangolin/display/display.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/shift_right.h:
 
@@ -2096,8 +2128,6 @@ CMakeFiles/direct_method.dir/direct_method.cpp.o: /Users/liuyz/slam/slambook2/ch
 
 /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayWrapper.h:
 
-/usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp:
-
 /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h:
 
 /opt/homebrew/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h:
@@ -2109,8 +2139,6 @@ CMakeFiles/direct_method.dir/direct_method.cpp.o: /Users/liuyz/slam/slambook2/ch
 /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h:
 
 /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h:
-
-/usr/local/include/pangolin/display/attach.h:
 
 /opt/homebrew/include/eigen3/Eigen/src/Cholesky/LLT.h:
 
@@ -2179,6 +2207,8 @@ CMakeFiles/direct_method.dir/direct_method.cpp.o: /Users/liuyz/slam/slambook2/ch
 /opt/anaconda3/include/boost/config/user.hpp:
 
 /opt/anaconda3/include/boost/type_traits/is_convertible.hpp:
+
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h:
 
 /opt/anaconda3/include/boost/type_traits/is_base_of.hpp:
 
@@ -2379,8 +2409,6 @@ CMakeFiles/direct_method.dir/direct_method.cpp.o: /Users/liuyz/slam/slambook2/ch
 /opt/anaconda3/include/boost/none.hpp:
 
 /opt/anaconda3/include/boost/move/utility.hpp:
-
-/usr/local/include/opencv4/opencv2/stitching/detail/util.hpp:
 
 /opt/anaconda3/include/boost/move/traits.hpp:
 
@@ -2882,6 +2910,8 @@ CMakeFiles/direct_method.dir/direct_method.cpp.o: /Users/liuyz/slam/slambook2/ch
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/iosfwd:
 
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h:
+
 /opt/anaconda3/include/boost/smart_ptr/shared_ptr.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/iomanip:
@@ -2899,6 +2929,8 @@ CMakeFiles/direct_method.dir/direct_method.cpp.o: /Users/liuyz/slam/slambook2/ch
 /opt/anaconda3/include/boost/format.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/format:
+
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/float.h:
 
@@ -3071,6 +3103,8 @@ CMakeFiles/direct_method.dir/direct_method.cpp.o: /Users/liuyz/slam/slambook2/ch
 /opt/anaconda3/include/boost/config/platform/macos.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__filesystem/perms.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__type_traits/is_trivially_lexicographically_comparable.h:
 
@@ -3279,6 +3313,8 @@ CMakeFiles/direct_method.dir/direct_method.cpp.o: /Users/liuyz/slam/slambook2/ch
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/partial_sort_copy.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/machine/_endian.h:
+
+/opt/homebrew/include/eigen3/Eigen/Eigenvalues:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__tuple/tuple_like.h:
 
@@ -3626,11 +3662,17 @@ CMakeFiles/direct_method.dir/direct_method.cpp.o: /Users/liuyz/slam/slambook2/ch
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__type_traits/is_nothrow_move_constructible.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__concepts/regular.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h:
+
 /opt/anaconda3/include/boost/core/addressof.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__iterator/erase_if_container.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__type_traits/is_nothrow_convertible.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h:
 
 /opt/anaconda3/include/boost/preprocessor/logical/limits/bool_256.hpp:
 
@@ -3813,8 +3855,6 @@ CMakeFiles/direct_method.dir/direct_method.cpp.o: /Users/liuyz/slam/slambook2/ch
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/any_of.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__random/seed_seq.h:
-
-/usr/local/include/pangolin/compat/type_traits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__fwd/memory_resource.h:
 
@@ -4005,8 +4045,6 @@ CMakeFiles/direct_method.dir/direct_method.cpp.o: /Users/liuyz/slam/slambook2/ch
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/format_arg.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/extended_grapheme_cluster_table.h:
-
-/usr/local/include/opencv4/opencv2/videoio.hpp:
 
 /opt/homebrew/include/eigen3/Eigen/src/Core/Transpositions.h:
 
@@ -4344,8 +4382,6 @@ CMakeFiles/direct_method.dir/direct_method.cpp.o: /Users/liuyz/slam/slambook2/ch
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/unwrap_iter.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__concepts/regular.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__type_traits/is_empty.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/three_way_comp_ref_type.h:
@@ -4668,6 +4704,8 @@ CMakeFiles/direct_method.dir/direct_method.cpp.o: /Users/liuyz/slam/slambook2/ch
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/ranges_copy_n.h:
 
+/opt/homebrew/include/eigen3/Eigen/Dense:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/unique.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/ranges_equal_range.h:
@@ -4883,6 +4921,12 @@ CMakeFiles/direct_method.dir/direct_method.cpp.o: /Users/liuyz/slam/slambook2/ch
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__math/rounding_functions.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/ranges_find_first_of.h:
+
+/usr/local/include/opencv4/opencv2/video/background_segm.hpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/errno.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__fwd/fstream.h:
 
