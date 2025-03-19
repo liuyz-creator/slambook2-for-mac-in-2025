@@ -10,9 +10,9 @@ typedef vector<Eigen::Vector2d, Eigen::aligned_allocator<Eigen::Vector2d>> VecVe
 double fx = 718.856, fy = 718.856, cx = 607.1928, cy = 185.2157;
 double baseline = 0.573;
 
-string left_file = "./left.png";
-string disparity_file = "./disparity.png";
-boost::format fmt_others("./%06d.png");
+string left_file = "../left.png";
+string disparity_file = "../disparity.png";
+boost::format fmt_others("../%06d.png");
 
 typedef Eigen::Matrix<double, 6, 6> Matrix6d;
 typedef Eigen::Matrix<double, 2, 6> Matrix26d;
